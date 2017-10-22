@@ -3,12 +3,6 @@ Object.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 }
 
-//Reset player to beginning position
-Object.prototype.reset = function() {
-  player.x = 200;
-  player.y = 400;
-}
-
 /*
     Enemy Objects
 */
@@ -55,13 +49,13 @@ var Player = function(){
 //Update player position
 Player.prototype.update = function(){
     if(this.controtlPosition === 'left' && this.x > 0){ 
-        this.x = this.x - 50; 
+        this.x = this.x - 101; 
     }else if(this.controtlPosition === 'right' && this.x != 400){
-        this.x = this.x + 50;
+        this.x = this.x + 101;
     }else if(this.controtlPosition === 'up'){
-        this.y = this.y - 50;
+        this.y = this.y - 83;
     }else if (this.controtlPosition === 'down' && this.y != 400){
-        this.y = this.y + 50;
+        this.y = this.y + 83;
     }
     this.controtlPosition = null;
     
@@ -70,6 +64,11 @@ Player.prototype.update = function(){
     }
 }
 
+//Reset player to beginning position
+Player.prototype.reset = function() {
+  this.x = 200;
+  this.y = 400;
+}
 
 //Input handler for player
 Player.prototype.handleInput = function(e){

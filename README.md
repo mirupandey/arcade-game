@@ -1,5 +1,9 @@
 # Classic Arcade Game
 
+## How to Run
+
+> Click on index.html or visit my GitHub page (https://github.com/mirupandey/arcade-game - index.html) and enjoy the app 
+
 ## How to Play
 
 > The user can control the movement of the player using arrow keys.
